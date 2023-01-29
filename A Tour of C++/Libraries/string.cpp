@@ -45,5 +45,9 @@ int main()
   name.insert(name.begin() + endre_pos + sizeof("endre"), 'a');
   std::cout << "Name after insert: " << name << std::endl;
 
+  // std::count
+  int i_occurences = std::count(name.begin(), name.end(), ' ');
+  std::cout << "i_occurences: " << i_occurences << std::endl;
+
   return 0;
 }
