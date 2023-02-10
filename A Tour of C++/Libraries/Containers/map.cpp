@@ -5,13 +5,14 @@
 
 struct Person
 {
+private:
   std::string name{};
   std::string surname{};
 
 public:
   Person(const std::string& name, const std::string& surname) : name(name), surname(surname) {}
 
-  //friend ostream& operator<<(ostream& os, const Person& p);
+  friend std::ostream& operator<<(std::ostream& os, const Person& p);
 };
 
 std::ostream& operator<<(std::ostream& os, const Person& p)
